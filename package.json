@@ -2,10 +2,10 @@
     "name": "bokoup-website",
     "version": "0.1.0",
     "license": "Apache-2.0",
-    "homepage": "https://github.com/bokoup/bokoup-program-library",
+    "homepage": "https://github.com/bokoup/bokoup-website",
     "repository": {
         "type": "git",
-        "url": "https://github.com/bokoup/bokoup-program-library"
+        "url": "https://github.com/bokoup/bokoup-website"
     },
     "publishConfig": {
         "access": "public"
@@ -30,7 +30,7 @@
         "lint": "eslint . && prettier --check '{*,**/*}.{js,ts,jsx,tsx,json}'",
         "lint:fix": "eslint --fix . && yarn fmt",
         "nuke": "shx rm -rf node_modules yarn.lock",
-        "predeploy": "yarn clean && parcel build src/index.html --public-url https://bokoup.github.io/bokoup-website --no-scope-hoist",
+        "predeploy": "yarn clean && parcel build src/index.html --public-url https://bokoup.com --no-scope-hoist",
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
@@ -44,6 +44,9 @@
         "react-dom": "^18.2.0"
     },
     "devDependencies": {
+        "@parcel/resolver-glob": "^2.8.0",
+        "@parcel/transformer-svg-react": "^2.8.0",
+        "@parcel/transformer-typescript-tsc": "^2.8.0",
         "@types/eslint": "^8.4.2",
         "@types/eslint-plugin-prettier": "^3.1.0",
         "@types/node": "^17.0.34",

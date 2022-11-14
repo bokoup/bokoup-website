@@ -3,8 +3,11 @@ import type { } from '@mui/material/themeCssVarsAugmentation';
 
 const theme = extendTheme({
     typography: {
-        fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial'
-
+        fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial',
+        fontWeightBold: '100',
+        fontWeightLight: '100',
+        fontWeightRegular: '100',
+        fontWeightMedium: '100',
     },
     colorSchemes: {
         light: {

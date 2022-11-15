@@ -3,6 +3,7 @@ import { Experimental_CssVarsProvider as CssVarsProvider, useColorScheme } from 
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
+import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import { Context, Store } from './Store';
@@ -21,7 +22,7 @@ export const App: FC = () => {
 
 function Copyright() {
     return (
-        <Typography variant='h5'>
+        <Typography variant='h6'>
             {'Copyright © '}
             <Link href="https://bokoup.com/">
                 bokoup.com
@@ -38,21 +39,35 @@ export const Content: FC = () => {
 
     return (
         <Paper sx={{ height: '100vh' }}>
-            <Grid container flexDirection="column" alignContent='center' justifyContent='center' sx={{ height: '100%' }}>
-                <Grid container justifyContent='center' alignContent='center' flexGrow={3}>
-                    <Grid container justifyContent='center' alignContent='center' >
-                        <Box component='img' src={logo} sx={{ height: '10em', m: '1em' }} />
-                    </Grid>
-                    <Grid container justifyContent='center' alignContent='center' >
-                        <Typography variant='h3' style={{ fontSize: '8em' }}>
-                            bokoup
-                        </Typography>
+            <Grid container flexDirection='column' height='100%'>
+                <Grid container alignContent='center' justifyContent='center' flexGrow={1}>
+                    <Grid container alignContent='center' justifyContent='center'>
+                        <Box component='img' src={logo} sx={{ height: '9em', m: '1em' }} />
+                        <Grid container flexDirection='column' textAlign={{ xs: 'center', sm: 'left' }} justifyContent='center'>
+                            <Typography variant='h1'>
+                                <Box fontSize={{ xs: '1em', sm: '2em' }}>
+                                    bokoup
+                                </Box>
+                            </Typography>
+                            <Box >
+                                <Typography textAlign='center'>
+                                    Blockchain based offers,<br />promotions and loyalty programs
+                                </Typography>
+                            </Box>
+                        </Grid>
                     </Grid>
                 </Grid>
-                <Grid container flexGrow={1} alignContent='flex-end' justifyContent='center' sx={{ m: '1em' }}>
+
+                <Grid container justifyContent='center' alignContent='center' flexGrow={1} sx={{ m: '1em' }}>
+                    <Button color='primary' sx={{ width: '248px' }} variant='contained' href="https://forms.clickup.com/36264399/f/12jpef-560/0I2JTBPMXJBDDAYD77">
+                        APPLY TO ADOPT EARLY
+                    </Button>
+                </Grid>
+                <Grid container justifyContent='center' alignContent='flex-end' flexGrow={1} sx={{ m: '1em' }}>
                     <Copyright />
                 </Grid>
+
             </Grid>
-        </Paper>
+        </Paper >
     );
 };

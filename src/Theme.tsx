@@ -1,14 +1,25 @@
 import { experimental_extendTheme as extendTheme } from '@mui/material/styles';
 import type { } from '@mui/material/themeCssVarsAugmentation';
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/200.css";
 
 const theme = extendTheme({
     typography: {
-        fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial',
-        fontWeightBold: '100',
-        fontWeightLight: '100',
-        fontWeightRegular: '100',
-        fontWeightMedium: '100',
+        h1: {
+            fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial',
+            fontWeightRegular: 300,
+            fontWeightBold: 400,
+            fontWeightLight: 200,
+        },
+        h6: {
+            fontFamily: '"Poppins", "Roboto", "Helvetica", "Arial',
+            fontWeightRegular: 300,
+            fontWeightBold: 400,
+            fontWeightLight: 200,
+        }
     },
+
     colorSchemes: {
         light: {
             palette: {
